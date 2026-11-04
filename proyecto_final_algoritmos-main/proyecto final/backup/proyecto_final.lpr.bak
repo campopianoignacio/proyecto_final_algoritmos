@@ -1,0 +1,6 @@
+PROGRAM proyecto_final;
+USES Menu;
+BEGIN
+ MENU_PRINCIPAL();
+END.
+
