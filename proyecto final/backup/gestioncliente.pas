@@ -41,13 +41,10 @@ begin
   nuevoCliente.dni := dni;
 
   // 2. Cargar el resto de los campos
-  Write('Nombre completo: ');
-  ReadLn(nuevoCliente.nombreCompleto);
+  nuevoCliente.nombreCompleto:= cargarnombre();
 
-  Write('Direccion: ');
-  ReadLn(nuevoCliente.direccion);
+  nuevoCliente.direccion:= cargarmail();
 
-  // Asumiendo que tienes una función para cargar la fecha de nacimiento (como en tus validaciones)
   nuevoCliente.fechaNac := cargarFecha();
 
   Write('Teléfono/Celular: ');
@@ -125,7 +122,7 @@ begin
         TextColor(White);
         Writeln('Nombre actual: ', cliente.nombreCompleto);
         Write('Nuevo nombre : ');
-        ReadLn(cliente.nombreCompleto);
+        cliente.nombreCompleto:=CargarNombre();
         EscribirArchivoCliente(Arch, pos, cliente);
       end;
       2:

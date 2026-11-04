@@ -41,20 +41,15 @@ begin
   nuevoCliente.dni := dni;
 
   // 2. Cargar el resto de los campos
-  Write('Nombre completo: ');
-  ReadLn(nuevoCliente.nombreCompleto);
+  nuevoCliente.nombreCompleto:= cargarnombre();
 
-  Write('Direccion: ');
-  ReadLn(nuevoCliente.direccion);
+  nuevoCliente.direccion:= cargardireccion();
 
-  // Asumiendo que tienes una función para cargar la fecha de nacimiento (como en tus validaciones)
   nuevoCliente.fechaNac := cargarFecha();
 
-  Write('Teléfono/Celular: ');
-  ReadLn(nuevoCliente.celular);
+  nuevoCliente.celular:= cargarTelefono();
 
-  Write('Email: ');
-  ReadLn(nuevoCliente.email);
+  nuevoCliente.email:= cargarmail();
 
   // Por defecto, un cliente nuevo nace activo
   nuevoCliente.activo := true;
